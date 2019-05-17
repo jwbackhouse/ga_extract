@@ -1,0 +1,27 @@
+{
+  "name": "google_analytics_extract",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jwbackhouse/ga_extract.git"
+  },
+  "keywords": [
+    "skarp",
+    "ga",
+    "analytics"
+  ],
+  "author": "James Backhouse",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jwbackhouse/ga_extract/issues"
+  },
+  "homepage": "https://github.com/jwbackhouse/ga_extract#readme",
+  "dependencies": {
+    "stream": "0.0.2"
+  }
+}
