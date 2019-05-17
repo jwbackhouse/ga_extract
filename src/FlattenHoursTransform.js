@@ -25,7 +25,7 @@ class FlattenHoursTransform extends Transform {
 
 const flattenHours = (gaCoordinateJsonAsObject) => {
   const flattened = []
-  gaJsonAsObject.rows.data.map((rows) => {
+  gaCoordinateJsonAsObject.rows.data.map((rows) => {
     flattened.push(dot.dot({
       latitude: darkSkyCoordinateJsonAsObject.latitude,
       longitude: darkSkyCoordinateJsonAsObject.longitude,
