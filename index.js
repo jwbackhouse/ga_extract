@@ -17,10 +17,10 @@
   
   // INTERNAL DEPENDENCIES
   const gaDataTransform = require('./src/GADataTransform')
-//  const FlattenHoursTransform = require('./src/FlattenHoursTransform')
+  const FlattenHoursTransform = require('./src/FlattenHoursTransform')
   
-  // const csvFields = ['latitude', 'longitude', 'summary'] // Use this if we only want specific fields
-  const csvOptions = {} // { csvFields }
+  const csvFields = ['selfLink', 'rows'] // Use this if we only want specific fields
+  const csvOptions = { csvFields } // { csvFields }
   const csvTransformOptions = { highWaterMark: 8192, objectMode: true }
   const toCSVTransform = new json2csv.Transform(csvOptions, csvTransformOptions)
   
@@ -31,7 +31,7 @@
     readStream,
     csv(),
     gaDataTransform(GA_HOSTNAME, GA_PROTOCOL, GA_PATH, GA_TOKEN, GA_CONCURRENT_CONNECTIONS),
-//    new FlattenHoursTransform(),
+    new FlattenHoursTransform(),
     toCSVTransform,
     writeStream,
     (error) => {
@@ -41,3 +41,4 @@
         console.log('Pipeline succeeded')
       }
   })
+
