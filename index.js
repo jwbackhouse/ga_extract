@@ -6,7 +6,7 @@
   const GA_PATH = 'analytics/v3/data/ga'
   const GA_PROTOCOL = 'https'
   const INPUT_FILE_NAME = './input.csv'
-  const GA_CONCURRENT_CONNECTIONS = 100
+  const GA_CONCURRENT_CONNECTIONS = 5
   const CSV_OUTPUT_FILE_NAME = './out/output.csv'
   
   // EXTERNAL DEPENDENCIES
@@ -17,7 +17,7 @@
   
   // INTERNAL DEPENDENCIES
   const gaDataTransform = require('./src/GADataTransform')
-  const FlattenHoursTransform = require('./src/FlattenHoursTransform')
+//  const FlattenHoursTransform = require('./src/FlattenHoursTransform')
   
   // const csvFields = ['latitude', 'longitude', 'summary'] // Use this if we only want specific fields
   const csvOptions = {} // { csvFields }
@@ -31,7 +31,7 @@
     readStream,
     csv(),
     gaDataTransform(GA_HOSTNAME, GA_PROTOCOL, GA_PATH, GA_TOKEN, GA_CONCURRENT_CONNECTIONS),
-    new FlattenHoursTransform(),
+//    new FlattenHoursTransform(),
     toCSVTransform,
     writeStream,
     (error) => {

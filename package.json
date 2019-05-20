@@ -25,6 +25,7 @@
     "csv-parser": "^2.3.0",
     "dot-object": "^1.7.1",
     "fs": "0.0.1-security",
+    "googleapis": "^40.0.0",
     "json2csv": "^4.5.1",
     "node-fetch": "^2.6.0",
     "stream": "0.0.2",
