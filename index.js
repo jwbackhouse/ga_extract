@@ -4,9 +4,10 @@ const GA_HOSTNAME = 'www.googleapis.com';
 const GA_PATH = 'analytics/v3/data/ga';
 const GA_PROTOCOL = 'https';
 const GA_CONCURRENT_CONNECTIONS = 5;
-const GA_VIEWID = '166530533'; // unique ID for the Analytics view being queried - found in GA when choosing account>property>view
-const GA_METRICS = 'ga:sessions,ga:pageviews'; // separate multiple terms with comma. Prefix each with 'ga:'
-const GA_DIMENSIONS = 'ga:date'; // separate multiple terms with comma. Prefix each with 'ga:'
+const GA_VIEWID = '166530533'; // unique ID for the Analytics view being queried
+                              // see https://developers.google.com/analytics/devguides/reporting/core/v3#user_reports for where to find it
+const GA_METRICS = 'ga:sessions,ga:pageviews'; // separate multiple terms with comma, no spaces. Prefix each with 'ga:'
+const GA_DIMENSIONS = 'ga:date'; // separate multiple terms with comma, no spaces. Prefix each with 'ga:'
 const GA_FROM = '2020-06-01'; // 'from' date (inclusive), formatted as yyyy-mm-dd
 const GA_TO = '2020-07-01';  // 'to' date (inclusive), formatted as yyyy-mm-dd or can use 'yesterday'
 const INPUT_FILE_NAME = './input.csv';  // contains search terms used to filter URLs
