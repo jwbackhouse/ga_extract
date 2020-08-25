@@ -1,6 +1,7 @@
 # ga_extract
-Extract data from Google Analytics using Code Reporting API
 
-Currently set up to return pageviews by date for search terms, as defined in input.csv
+Extracts data from Google Analytics using the [Core Reporting API](https://developers.google.com/analytics/devguides/reporting/core/v3/).
 
-Requires API key to be set as an environment variable
+Currently set up to return pageviews by date for search terms, as defined in input.csv.
+
+Requires API key to be set as an environment variable.
