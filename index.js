@@ -1,11 +1,11 @@
 // Set query parameters here
 const GA_TOKEN = process.env.GA_TOKEN;
+const GA_VIEWID = process.env.GA_VIEWID;  // unique ID for the Analytics view being queried
+                                        // see https://developers.google.com/analytics/devguides/reporting/core/v3#user_reports for where to find it
 const GA_HOSTNAME = 'www.googleapis.com';
 const GA_PATH = 'analytics/v3/data/ga';
 const GA_PROTOCOL = 'https';
 const GA_CONCURRENT_CONNECTIONS = 5;
-const GA_VIEWID = '166530533'; // unique ID for the Analytics view being queried
-                              // see https://developers.google.com/analytics/devguides/reporting/core/v3#user_reports for where to find it
 const GA_METRICS = 'ga:sessions,ga:pageviews'; // separate multiple terms with comma, no spaces. Prefix each with 'ga:'
 const GA_DIMENSIONS = 'ga:date'; // separate multiple terms with comma, no spaces. Prefix each with 'ga:'
 const GA_FROM = '2020-06-01'; // 'from' date (inclusive), formatted as yyyy-mm-dd
